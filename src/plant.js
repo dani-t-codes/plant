@@ -5,8 +5,8 @@ const storeState = () => {
     const newState = changeStateFunction(currentState);
     currentState = {...newState};
     return newState;
-  }
-}
+  };
+};
 
 const stateControl = storeState();
 
@@ -16,14 +16,15 @@ const changeStateFunction = (prop) => {
     return (state) => ({
       ...state,
       [prop] : (state[prop] || 0) + value
-    })
-  }
-}
+    });
+  };
+};
 
 const feed = changeStateFunction("soil");
 const hydrate = changeStateFunction("water");
 const giveLight = changeStateFunction("light");
 
-const blueFood = changeStateFunction("soil")(5)
-const greenFood = changeStateFunction("soil")(10)
-const yuckyFood = changeStateFunction("soil")(-5)
+const blueFood = changeStateFunction("soil")(5);
+const greenFood = changeStateFunction("soil")(10);
+const yuckyFood = changeStateFunction("soil")(-5);
+
