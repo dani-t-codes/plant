@@ -1,7 +1,7 @@
 //this fxn stores state
 const storeState = () => {
   let currentState = {}; // would add { soil: 0, light: 0, water: 0 }; to initialize the plant with all three props
-  return (changeStateFunction) => {
+  return (changeStateFunction = state => state) => {
     const newState = changeStateFunction(currentState);
     currentState = {...newState};
     return newState;
