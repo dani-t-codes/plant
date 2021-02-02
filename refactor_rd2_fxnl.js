@@ -24,7 +24,7 @@ const changeState = (prop) => {
     })
   }
 }
-//^^ this setup purposely creates a function factory!
+//^^ this setup purposely creates a **function factory**!
 //now the following, more specific fxns can be created with the current changeState()
 
 const feed = changeState("soil");
